@@ -4,3 +4,7 @@
 # VSCode
 *.code-workspace
 .vscode
+
+# System generated files/folders
+__pycache__
+.DS_STORE
