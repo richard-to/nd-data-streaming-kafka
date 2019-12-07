@@ -32,7 +32,7 @@ class Producer:
         #
         #
         # TODO: Configure the broker properties below. Make sure to reference the project README
-        # and use the Host URL for Kafka and Schema Registry!
+        # and use the Host URL for Kafka and Schema Registry! (DONE)
         #
         #
         self.broker_properties = {
@@ -46,7 +46,7 @@ class Producer:
             self.create_topic()
             Producer.existing_topics.add(self.topic_name)
 
-        # TODO: Configure the AvroProducer
+        # TODO: Configure the AvroProducer (DONE)
         self.producer = AvroProducer(
             {
                 "bootstrap.servers": self.broker_properties["broker_url"],
@@ -60,7 +60,7 @@ class Producer:
         #
         #
         # TODO: Write code that creates the topic for this producer if it does not already exist on
-        # the Kafka Broker.
+        # the Kafka Broker. (DONE)
         #
         #
         client = AdminClient({"bootstrap.servers": self.broker_properties["broker_url"]})
@@ -80,7 +80,7 @@ class Producer:
         """Prepares the producer for exit by cleaning up the producer"""
         #
         #
-        # TODO: Write cleanup code for the Producer here
+        # TODO: Write cleanup code for the Producer here (DONE)
         #
         #
         self.producer.close()
