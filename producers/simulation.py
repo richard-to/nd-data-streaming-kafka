@@ -74,7 +74,7 @@ class TimeSimulation:
                 _ = [line.run(curr_time, self.time_step) for line in self.train_lines]
                 curr_time = curr_time + self.time_step
                 time.sleep(self.sleep_seconds)
-        except KeyboardInterrupt as e:
+        except KeyboardInterrupt:
             logger.info("Shutting down")
             _ = [line.close() for line in self.train_lines]
 
