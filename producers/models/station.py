@@ -67,7 +67,7 @@ class Station(Producer):
             topic=self.topic_name,
             value={
                 "direction": direction,
-                "line": self.color,
+                "line": self.color.name,
                 "prev_direction": prev_direction,
                 "prev_station_id": prev_station_id,
                 "station_id": self.station_id,

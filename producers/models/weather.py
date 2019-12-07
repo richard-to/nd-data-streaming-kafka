@@ -107,8 +107,8 @@ class Weather(Producer):
                             "timestamp": self.time_millis()
                         },
                         "value": {
-                            "temp": self.temp,
-                            "status": self.status,
+                            "temperature": self.temp,
+                            "status": self.status.name,
                         },
                     }],
                     "value_schema": json.dumps(Weather.value_schema),

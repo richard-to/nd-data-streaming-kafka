@@ -4,7 +4,7 @@
   "name": "arrival.value",
   "fields": [
       {"name": "station_id", "type": "int"},
-      {"name": "train_id", "type": "int"},
+      {"name": "train_id", "type": "string"},
       {"name": "direction", "type": "string"},
       {"name": "line", "type": ["null", "string"], "default": null},
       {"name": "train_status", "type": "string", "default": "in_service"},
