@@ -39,7 +39,7 @@ def configure_connector():
                 "value.converter.schemas.enable": "false",
                 "batch.max.rows": "500",
                 # TODO (DONE)
-                "connection.url": "jdbc:postgresql://172.31.1.20:5432/cta",
+                "connection.url": "jdbc:postgresql://postgres:5432/cta",
                 # TODO (DONE)
                 "connection.user": "cta_admin",
                 # TODO (DONE)
@@ -47,7 +47,7 @@ def configure_connector():
                 # TODO (DONE)
                 "table.whitelist": "stations",
                 # TODO (DONE)
-                "mode": "incremental",
+                "mode": "incrementing",
                 # TODO (DONE)
                 "incrementing.column.name": "stop_id",
                 # TODO (DONE)
