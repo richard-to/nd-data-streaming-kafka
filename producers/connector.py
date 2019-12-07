@@ -51,7 +51,7 @@ def configure_connector():
                 # TODO (DONE)
                 "incrementing.column.name": "stop_id",
                 # TODO (DONE)
-                "topic.prefix": "org.chicago.cta",
+                "topic.prefix": "org.chicago.cta.db.",
                 # TODO (DONE)
                 # Since the stations table shouldn't change that much, we'll use an interval of 1 hour
                 "poll.interval.ms": "3600000",
