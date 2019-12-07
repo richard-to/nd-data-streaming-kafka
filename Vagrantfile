@@ -9,6 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "172.31.1.20"
 
+  config.vm.network "forwarded_port", guest: 9092, host: 9092
+  config.vm.network "forwarded_port", guest: 8081, host: 8081
+
   config.ssh.forward_agent = true
 
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
