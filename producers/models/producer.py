@@ -36,10 +36,10 @@ class Producer:
         #
         #
         self.broker_properties = {
-            "bootstrap.servers": "PLAINTEXT://172.31.1.20:9092",
+            "bootstrap.servers": "PLAINTEXT://127.0.0.1:9092",
             "compression.type": "lz4",
         }
-        schema_registry_url = "http://172.31.1.20:8081"
+        schema_registry_url = "http://127.0.0.1:8081"
 
         # If the topic does not already exist, try to create it
         if self.topic_name not in Producer.existing_topics:

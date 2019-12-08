@@ -39,7 +39,7 @@ class KafkaConsumer:
             "bootstrap.servers": "PLAINTEXT://127.0.0.1:9092",
             "group.id": "cta",
         }
-        schema_registry_url = "http://172.31.1.20:8081"
+        schema_registry_url = "http://127.0.0.1:8081"
 
         # TODO: Create the Consumer, using the appropriate type.
         if is_avro is True:
