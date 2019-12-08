@@ -41,7 +41,7 @@ class Station(Producer):
         super().__init__(
             topic_name,
             key_schema=Station.key_schema,
-            num_partitions=5,
+            num_partitions=1,
             num_replicas=1,
             value_schema=Station.value_schema,
         )

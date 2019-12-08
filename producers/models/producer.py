@@ -36,10 +36,10 @@ class Producer:
         #
         #
         self.broker_properties = {
-            "broker_url": "PLAINTEXT://172.31.1.20:9092",
-            "schema_registry_url": "http://172.31.1.20:8081",
-            "compression_type": "lz4",
+            "bootstrap.servers": "PLAINTEXT://172.31.1.20:9092",
+            "compression.type": "lz4",
         }
+        schema_registry_url = "http://172.31.1.20:8081"
 
         # If the topic does not already exist, try to create it
         if self.topic_name not in Producer.existing_topics:
@@ -48,11 +48,8 @@ class Producer:
 
         # TODO: Configure the AvroProducer (DONE)
         self.producer = AvroProducer(
-            {
-                "bootstrap.servers": self.broker_properties["broker_url"],
-                "compression.type": self.broker_properties["compression_type"],
-            },
-            schema_registry=CachedSchemaRegistryClient(self.broker_properties["schema_registry_url"]),
+            self.broker_properties,
+            schema_registry=CachedSchemaRegistryClient(schema_registry_url),
         )
 
     def create_topic(self):
@@ -63,7 +60,7 @@ class Producer:
         # the Kafka Broker. (DONE)
         #
         #
-        client = AdminClient({"bootstrap.servers": self.broker_properties["broker_url"]})
+        client = AdminClient(self.broker_properties)
         futures = client.create_topics(
             [NewTopic(topic=self.topic_name, num_partitions=self.num_partitions, replication_factor=self.num_replicas)]
         )
