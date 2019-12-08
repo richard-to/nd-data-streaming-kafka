@@ -94,7 +94,7 @@ def run_server():
             tornado.ioloop.IOLoop.current().spawn_callback(consumer.consume)
 
         tornado.ioloop.IOLoop.current().start()
-    except KeyboardInterrupt as e:
+    except KeyboardInterrupt:
         logger.info("shutting down server")
         tornado.ioloop.IOLoop.current().stop()
         for consumer in consumers:
