@@ -8,7 +8,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 
-KAFKA_CONNECT_URL = "http://172.31.1.20:8083/connectors"
+KAFKA_CONNECT_URL = "http://127.0.0.1:8083/connectors"
 CONNECTOR_NAME = "stations"
 
 

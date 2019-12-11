@@ -20,7 +20,7 @@ class Weather(Producer):
         "status", "sunny partly_cloudy cloudy windy precipitation", start=0
     )
 
-    rest_proxy_url = "http://172.31.1.20:8082"
+    rest_proxy_url = "http://127.0.0.1:8082"
 
     key_schema = None
     value_schema = None

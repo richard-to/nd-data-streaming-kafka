@@ -10,7 +10,7 @@ import topic_check
 logger = logging.getLogger(__name__)
 
 
-KSQL_URL = "http://172.31.1.20:8088"
+KSQL_URL = "http://127.0.0.1:8088"
 
 #
 # TODO: Complete the following KSQL statements.
