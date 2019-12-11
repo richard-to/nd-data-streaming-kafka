@@ -72,6 +72,7 @@ class Station(Producer):
                 "prev_station_id": prev_station_id,
                 "station_id": self.station_id,
                 "train_id": train.train_id,
+                "train_status": train.status,
             },
             value_schema=self.value_schema,
         )

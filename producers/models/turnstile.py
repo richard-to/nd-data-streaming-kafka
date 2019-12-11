@@ -23,14 +23,6 @@ class Turnstile(Producer):
 
     def __init__(self, station):
         """Create the Turnstile"""
-        station_name = (
-            station.name.lower()
-            .replace("/", "_and_")
-            .replace(" ", "_")
-            .replace("-", "_")
-            .replace("'", "")
-        )
-
         #
         #
         # TODO: Complete the below by deciding on a topic name, number of partitions, and number of
@@ -62,9 +54,9 @@ class Turnstile(Producer):
                 key={"timestamp": self.time_millis()},
                 key_schema=self.key_schema,
                 value={
+                    "line": self.station.color.name,
                     "station_id": self.station.station_id,
                     "station_name": self.station.name,
-                    "line": self.station.color.name,
                 },
                 value_schema=self.value_schema,
             )
