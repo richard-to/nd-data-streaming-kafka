@@ -49,6 +49,8 @@ class Producer:
         # TODO: Configure the AvroProducer (DONE)
         self.producer = AvroProducer(
             self.broker_properties,
+            default_key_schema=key_schema,
+            default_value_schema=value_schema,
             schema_registry=CachedSchemaRegistryClient(schema_registry_url),
         )
 
