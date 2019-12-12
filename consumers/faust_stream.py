@@ -41,7 +41,7 @@ out_topic = app.topic("org.chicago.cta.stations.table.v1", partitions=1)
 
 # TODO: Define a Faust Table (DONE)
 table = app.Table(
-    "transformed_statiosn",
+    "transformed_stations",
     default=TransformedStation,
     partitions=1,
     changelog_topic=out_topic,
