@@ -83,4 +83,3 @@ class Producer:
         #
         #
         self.producer.flush()
-        self.producer.close()
