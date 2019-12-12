@@ -22,7 +22,9 @@ KSQL_URL = "http://127.0.0.1:8088"
 #       Make sure to set the value format to JSON
 KSQL_STATEMENT = """
 CREATE TABLE turnstile (
-    station_id int
+    line string,
+    station_id int,
+    station_name string
 )
 WITH (
     KAFKA_TOPIC='org.chicago.cta.station.turnstile',
