@@ -82,4 +82,5 @@ class Producer:
         # TODO: Write cleanup code for the Producer here (DONE)
         #
         #
+        self.producer.flush()
         self.producer.close()
